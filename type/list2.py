@@ -183,3 +183,41 @@ a = [1, 2, 3]
 # 10) clear() : 리스트 요소 모두 삭제
 # list1.clear()
 # print(list1)  # []
+
+# 리스트 안의 요소가 비어 있는 경우는 false 인식
+# list1 = [1]
+# if list1:
+#     print("True")
+# else:
+#     print("False")
+
+# str1 = ""
+# if str1:
+#     print("True")
+# else:
+#     print("False")
+
+# 요소 in 리스트 : 해당 요소가 리스트안에 들어있는지 판별
+# fruit = ["사과", "배", "딸기", "수박", "메론"]
+
+# if "딸기" in fruit:  # not in
+#     print("딸기 있음")
+# else:
+#     print("딸기 없음")
+
+
+# enumerate() : 인덱스 값 사용
+list1 = [23, 12, 36, 53, 19]
+
+for item in list1:
+    print(item)
+
+print()
+
+for item in enumerate(list1):
+    print(item)
+
+print()
+
+for idx, item in enumerate(list1, start=1):
+    print("%d : %d" % (idx, item))
