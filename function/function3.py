@@ -106,11 +106,23 @@ nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # print(str_check(nums))
 
 # map() 사용
-def str_check(i):
-    if i % 3 == 0:
-        return str(i)
-    else:
-        return i
+# def str_check(i):
+#     if i % 3 == 0:
+#         return str(i)
+#     else:
+#         return i
+
+# print(list(map(str_check, nums)))
 
 
-print(list(map(str_check, nums)))
+# reduce : 함수를 차례대로 거치면서 원하는 결과만 남기는 것
+import functools
+
+a = [1, 3, 5, 8]
+
+# 리스트 합
+hap = 0
+for i in a:
+    hap = hap + i
+print(functools.reduce(lambda x, y: x + y, a))
+print(functools.reduce(lambda x, y: x * y, a))
